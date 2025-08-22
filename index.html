@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>裴宇航 - 个人学术主页</title>
+    <title data-zh="裴宇航 - 个人学术主页" data-en="Yuhang Pei - Academic Homepage">Yuhang Pei - Academic Homepage</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,13 +12,19 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <h1 class="nav-logo">裴宇航</h1>
+                <h1 class="nav-logo" data-zh="裴宇航" data-en="Yuhang Pei">Yuhang Pei</h1>
                 <ul class="nav-menu">
-                    <li><a href="#about" class="nav-link">关于我</a></li>
-                    <li><a href="#education" class="nav-link">教育背景</a></li>
-                    <li><a href="#research" class="nav-link">研究领域</a></li>
-                    <li><a href="#publications" class="nav-link">发表论文</a></li>
-                    <li><a href="#contact" class="nav-link">联系方式</a></li>
+                    <li><a href="#about" class="nav-link" data-zh="关于我" data-en="About">About</a></li>
+                    <li><a href="#education" class="nav-link" data-zh="教育背景" data-en="Education">Education</a></li>
+                    <li><a href="#research" class="nav-link" data-zh="研究领域" data-en="Research">Research</a></li>
+                    <li><a href="#publications" class="nav-link" data-zh="发表论文" data-en="Publications">Publications</a></li>
+                    <li><a href="#contact" class="nav-link" data-zh="联系方式" data-en="Contact">Contact</a></li>
+                    <li class="language-switch">
+                        <button id="langToggle" class="lang-btn" title="Switch Language">
+                            <i class="fas fa-language"></i>
+                            <span class="lang-text" data-zh="中" data-en="EN">EN</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -30,20 +36,17 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 class="hero-title">裴宇航</h1>
-                        <h2 class="hero-subtitle">Yuhang Pei</h2>
-                        <p class="hero-description">
-                            东北大学软件学院博士研究生，专注于深度学习（大模型、时序数据）和多智能体强化学习研究。
-                            致力于时间序列预测和分布式多智能体系统的理论研究与应用开发。
-                        </p>
+                        <h1 class="hero-title" data-zh="裴宇航" data-en="Yuhang Pei">Yuhang Pei</h1>
+                        <h2 class="hero-subtitle" data-zh="Yuhang Pei" data-en="Ph.D. Candidate">Ph.D. Candidate</h2>
+                        <p class="hero-description" data-zh="东北大学软件学院博士研究生，专注于深度学习（大模型、时序数据）和多智能体强化学习研究。致力于时间序列预测和分布式多智能体系统的理论研究与应用开发。" data-en="Ph.D. candidate at the School of Software, Northeastern University, focusing on deep learning (large models, time series data) and multi-agent reinforcement learning research. Dedicated to theoretical research and application development in time series forecasting and distributed multi-agent systems.">Ph.D. candidate at the School of Software, Northeastern University, focusing on deep learning (large models, time series data) and multi-agent reinforcement learning research. Dedicated to theoretical research and application development in time series forecasting and distributed multi-agent systems.</p>
                         <div class="hero-buttons">
                             <a href="#contact" class="btn btn-primary">
                                 <i class="fas fa-envelope"></i>
-                                联系我
+                                <span data-zh="联系我" data-en="Contact Me">Contact Me</span>
                             </a>
                             <a href="#publications" class="btn btn-secondary">
                                 <i class="fas fa-file-alt"></i>
-                                查看论文
+                                <span data-zh="查看论文" data-en="View Papers">View Papers</span>
                             </a>
                         </div>
                     </div>
@@ -57,26 +60,23 @@
         <!-- 教育背景部分 -->
         <section id="education" class="section">
             <div class="container">
-                <h2 class="section-title">教育背景</h2>
+                <h2 class="section-title" data-zh="教育背景" data-en="Education">Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h3 class="timeline-title">博士研究生</h3>
-                            <p class="timeline-subtitle">东北大学软件学院</p>
-                            <p class="timeline-date">2022年至今</p>
-                            <p class="timeline-description">
-                                导师：任涛（Tao Ren）教授<br>
-                                研究方向：深度学习、多智能体强化学习、大模型
-                            </p>
+                            <h3 class="timeline-title" data-zh="博士研究生" data-en="Ph.D. Candidate">Ph.D. Candidate</h3>
+                            <p class="timeline-subtitle" data-zh="东北大学软件学院" data-en="School of Software, Northeastern University">School of Software, Northeastern University</p>
+                            <p class="timeline-date" data-zh="2022年至今" data-en="2022 - Present">2022 - Present</p>
+                            <p class="timeline-description" data-zh="导师：任涛（Tao Ren）教授<br>研究方向：深度学习、多智能体强化学习、大模型" data-en="Supervisor: Prof. Tao Ren<br>Research Areas: Deep Learning, Multi-Agent Reinforcement Learning, Large Models">Supervisor: Prof. Tao Ren<br>Research Areas: Deep Learning, Multi-Agent Reinforcement Learning, Large Models</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h3 class="timeline-title">本科</h3>
-                            <p class="timeline-subtitle">东北大学软件学院</p>
-                            <p class="timeline-date">2018-2022年</p>
+                            <h3 class="timeline-title" data-zh="本科" data-en="Bachelor's Degree">Bachelor's Degree</h3>
+                            <p class="timeline-subtitle" data-zh="东北大学软件学院" data-en="School of Software, Northeastern University">School of Software, Northeastern University</p>
+                            <p class="timeline-date" data-zh="2018-2022年" data-en="2018-2022">2018-2022</p>
                         </div>
                     </div>
                 </div>
@@ -86,27 +86,21 @@
         <!-- 研究领域部分 -->
         <section id="research" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">研究领域</h2>
+                <h2 class="section-title" data-zh="研究领域" data-en="Research Areas">Research Areas</h2>
                 <div class="research-grid">
                     <div class="research-card">
                         <div class="research-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h3 class="research-title">深度学习</h3>
-                        <p class="research-description">
-                            专注于深度学习模型的设计与优化，特别是在时间序列预测领域的应用。
-                            探索大语言模型与扩散模型在时序数据建模中的创新应用。
-                        </p>
+                        <h3 class="research-title" data-zh="深度学习" data-en="Deep Learning">Deep Learning</h3>
+                        <p class="research-description" data-zh="专注于深度学习模型的设计与优化，特别是在时间序列预测领域的应用。探索大语言模型与扩散模型在时序数据建模中的创新应用。" data-en="Focused on the design and optimization of deep learning models, particularly their applications in time series forecasting. Exploring innovative applications of large language models and diffusion models in temporal data modeling.">Focused on the design and optimization of deep learning models, particularly their applications in time series forecasting. Exploring innovative applications of large language models and diffusion models in temporal data modeling.</p>
                     </div>
                     <div class="research-card">
                         <div class="research-icon">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <h3 class="research-title">多智能体强化学习</h3>
-                        <p class="research-description">
-                            研究多智能体系统中的策略学习与知识蒸馏，致力于提高分布式执行效率。
-                            关注智能体间的协作机制和策略优化方法。
-                        </p>
+                        <h3 class="research-title" data-zh="多智能体强化学习" data-en="Multi-Agent Reinforcement Learning">Multi-Agent Reinforcement Learning</h3>
+                        <p class="research-description" data-zh="研究多智能体系统中的策略学习与知识蒸馏，致力于提高分布式执行效率。关注智能体间的协作机制和策略优化方法。" data-en="Research on policy learning and knowledge distillation in multi-agent systems, dedicated to improving distributed execution efficiency. Focus on collaboration mechanisms between agents and policy optimization methods.">Research on policy learning and knowledge distillation in multi-agent systems, dedicated to improving distributed execution efficiency. Focus on collaboration mechanisms between agents and policy optimization methods.</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +109,7 @@
         <!-- 发表论文部分 -->
         <section id="publications" class="section">
             <div class="container">
-                <h2 class="section-title">发表论文</h2>
+                <h2 class="section-title" data-zh="发表论文" data-en="Publications">Publications</h2>
                 <div class="publications-list">
                     <div class="publication-item">
                         <div class="publication-header">
@@ -131,9 +125,9 @@
                             <i class="fas fa-bookmark"></i>
                             EMNLP 2025 Findings
                         </div>
-                        <div class="publication-date">
+                        <div class="publication-date" data-zh="2025年8月21日" data-en="August 21, 2025">
                             <i class="fas fa-calendar"></i>
-                            2025年8月21日
+                            <span>August 21, 2025</span>
                         </div>
                     </div>
 
@@ -151,9 +145,9 @@
                             <i class="fas fa-bookmark"></i>
                             Neurocomputing 2025
                         </div>
-                        <div class="publication-date">
+                        <div class="publication-date" data-zh="2025年1月1日" data-en="January 1, 2025">
                             <i class="fas fa-calendar"></i>
-                            2025年1月1日
+                            <span>January 1, 2025</span>
                         </div>
                     </div>
                 </div>
@@ -163,13 +157,13 @@
         <!-- 联系方式部分 -->
         <section id="contact" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">联系方式</h2>
+                <h2 class="section-title" data-zh="联系方式" data-en="Contact">Contact</h2>
                 <div class="contact-grid">
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <h3 class="contact-title">邮箱</h3>
+                        <h3 class="contact-title" data-zh="邮箱" data-en="Email">Email</h3>
                         <p class="contact-info">
                             <a href="mailto:2210540@stu.neu.edu.cn">2210540@stu.neu.edu.cn</a><br>
                             <a href="mailto:peiyuhang2000@foxmail.com">peiyuhang2000@foxmail.com</a>
@@ -179,22 +173,15 @@
                         <div class="contact-icon">
                             <i class="fas fa-university"></i>
                         </div>
-                        <h3 class="contact-title">所属机构</h3>
-                        <p class="contact-info">
-                            东北大学软件学院<br>
-                            Northeastern University<br>
-                            School of Software
-                        </p>
+                        <h3 class="contact-title" data-zh="所属机构" data-en="Affiliation">Affiliation</h3>
+                        <p class="contact-info" data-zh="东北大学软件学院<br>Northeastern University<br>School of Software" data-en="School of Software<br>Northeastern University<br>Shenyang, China">School of Software<br>Northeastern University<br>Shenyang, China</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-user-graduate"></i>
                         </div>
-                        <h3 class="contact-title">导师</h3>
-                        <p class="contact-info">
-                            任涛 教授<br>
-                            Prof. Tao Ren
-                        </p>
+                        <h3 class="contact-title" data-zh="导师" data-en="Supervisor">Supervisor</h3>
+                        <p class="contact-info" data-zh="任涛 教授<br>Prof. Tao Ren" data-en="Prof. Tao Ren<br>Northeastern University">Prof. Tao Ren<br>Northeastern University</p>
                     </div>
                 </div>
             </div>
@@ -204,19 +191,103 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 裴宇航. All rights reserved.</p>
-                <p>最后更新：2025年8月22日</p>
+                <p data-zh="&copy; 2025 裴宇航. All rights reserved." data-en="&copy; 2025 Yuhang Pei. All rights reserved.">&copy; 2025 Yuhang Pei. All rights reserved.</p>
+                <p data-zh="最后更新：2025年8月22日" data-en="Last updated: August 22, 2025">Last updated: August 22, 2025</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // 语言切换功能
+        class LanguageSwitcher {
+            constructor() {
+                this.currentLang = 'en'; // 默认英文
+                this.init();
+            }
+
+            init() {
+                // 从 localStorage 读取保存的语言设置，默认英文
+                const savedLang = localStorage.getItem('preferred-language') || 'en';
+                this.currentLang = savedLang;
+                
+                // 设置初始语言
+                this.setLanguage(this.currentLang);
+                
+                // 绑定切换按钮事件
+                const langToggle = document.getElementById('langToggle');
+                if (langToggle) {
+                    langToggle.addEventListener('click', () => this.toggleLanguage());
+                }
+            }
+
+            toggleLanguage() {
+                this.currentLang = this.currentLang === 'en' ? 'zh' : 'en';
+                this.setLanguage(this.currentLang);
+                localStorage.setItem('preferred-language', this.currentLang);
+            }
+
+            setLanguage(lang) {
+                // 设置 HTML 语言属性
+                document.documentElement.setAttribute('data-lang', lang);
+                document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+                
+                // 更新所有元素的文本内容
+                this.updateTextContent(lang);
+                
+                // 更新切换按钮文本
+                this.updateToggleButton(lang);
+            }
+
+            updateTextContent(lang) {
+                // 更新所有具有 data-zh 和 data-en 属性的元素
+                const elements = document.querySelectorAll('[data-zh][data-en]');
+                elements.forEach(element => {
+                    const text = element.getAttribute(`data-${lang}`);
+                    if (text) {
+                        if (element.tagName === 'TITLE') {
+                            element.textContent = text;
+                        } else if (element.classList.contains('lang-text')) {
+                            // 语言切换按钮的特殊处理
+                            element.textContent = text;
+                        } else if (element.classList.contains('publication-date')) {
+                            // 论文日期的特殊处理
+                            const span = element.querySelector('span');
+                            if (span) {
+                                span.textContent = text;
+                            }
+                        } else {
+                            // 对于包含 HTML 标签的内容，使用 innerHTML
+                            if (text.includes('<br>')) {
+                                element.innerHTML = text;
+                            } else {
+                                element.textContent = text;
+                            }
+                        }
+                    }
+                });
+            }
+
+            updateToggleButton(lang) {
+                const langText = document.querySelector('.lang-text');
+                if (langText) {
+                    langText.textContent = lang === 'en' ? '中' : 'EN';
+                }
+            }
+        }
+
+        // 初始化语言切换器
+        document.addEventListener('DOMContentLoaded', () => {
+            new LanguageSwitcher();
+        });
+
         // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
         });

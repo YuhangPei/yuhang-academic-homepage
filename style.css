@@ -73,6 +73,46 @@ body {
     color: #2563eb;
 }
 
+/* 语言切换按钮 */
+.language-switch {
+    margin-left: 1rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.lang-btn:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.lang-btn:active {
+    transform: translateY(0);
+}
+
+.lang-text {
+    font-weight: 600;
+}
+
+/* 语言切换样式 - 移除错误的display:none规则 */
+/* 这些规则被移除因为它们会隐藏所有文本 */
+
 /* 主要内容 */
 .main {
     margin-top: 70px;
