@@ -59,7 +59,6 @@ const PROFILE_DATA: ProfileData = {
   stats: [
     { label: "工程落地", value: 99, max: 100, color: "bg-green-500" },
     { label: "模型创新", value: 92, max: 100, color: "bg-blue-500" },
-    { label: "团队领导", value: 90, max: 100, color: "bg-purple-500" },
     { label: "全栈能力", value: 95, max: 100, color: "bg-yellow-500" },
     { label: "睡眠时间", value: 15, max: 100, color: "bg-red-600" }, 
   ],
