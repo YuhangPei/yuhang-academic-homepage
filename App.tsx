@@ -210,7 +210,7 @@ const PixelButton: React.FC<PixelButtonProps> = ({ active, onClick, children, ic
       relative group flex items-center gap-2 px-4 py-3 w-full font-mono text-sm uppercase tracking-widest transition-all duration-75 outline-none
       ${active 
         ? 'bg-indigo-600 text-white translate-x-[2px] translate-y-[2px] shadow-none' 
-        : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-slate-900'
+        : 'bg-slate-800 text-slate-200 hover:bg-slate-700 hover:text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-slate-900'
       }
     `}
   >
@@ -234,7 +234,7 @@ interface PixelCardProps {
 
 const PixelCard: React.FC<PixelCardProps> = ({ children, title, color = "border-slate-700" }) => (
   <div className={`relative bg-slate-900 border-4 ${color} p-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.5)]`}>
-    <div className="absolute -top-3 left-4 bg-slate-900 px-2 font-bold font-mono text-xs tracking-widest uppercase text-slate-400 border border-slate-700">
+    <div className="absolute -top-3 left-4 bg-slate-900 px-2 font-bold font-mono text-xs tracking-widest uppercase text-slate-300 border border-slate-700">
       {title}
     </div>
     {children}
@@ -360,7 +360,7 @@ export default function PixelPortfolio() {
   if (!booted) return <BootSequence onComplete={() => setBooted(true)} />;
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-mono overflow-hidden selection:bg-green-500 selection:text-black">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-mono overflow-hidden selection:bg-green-500 selection:text-black">
       
       {/* 1. Background Grid & Scanlines */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-10"
@@ -398,7 +398,7 @@ export default function PixelPortfolio() {
                 <rect x="14" y="8" width="2" height="2" fill="black"/>
                 <path d="M4 18h16v4H4z" opacity="0.5" />
               </svg>
-              <div className="absolute bottom-2 right-2 bg-black text-green-400 text-xs px-1 border border-green-500 animate-pulse">{d.ui.online}</div>
+               <div className="absolute bottom-2 right-2 bg-black text-green-400 text-xs px-1 border border-green-500 animate-pulse">{d.ui.online}</div>
               <div className="absolute top-2 left-2 text-[10px] text-white opacity-50 font-bold">{d.ui.level} {age}</div>
             </div>
             
@@ -530,7 +530,7 @@ export default function PixelPortfolio() {
                     <div key={idx} className="group relative pl-6 border-l-4 border-slate-700 hover:border-blue-500 transition-colors">
                       <div className="absolute -left-[10px] top-0 w-4 h-4 bg-slate-900 border-2 border-slate-600 group-hover:bg-blue-500 group-hover:border-blue-300 transition-colors rotate-45"></div>
                       <h3 className="text-lg font-bold text-slate-100 group-hover:text-blue-400 cursor-pointer leading-snug">{paper.title}</h3>
-                      <div className="flex flex-wrap gap-3 text-xs mt-2 text-slate-300 font-bold items-center">
+                      <div className="flex flex-wrap gap-3 text-xs mt-2 text-slate-200 font-bold items-center">
                         <span className="bg-slate-900 px-2 py-0.5 border border-slate-700 text-yellow-500">[{paper.year}]</span>
                         <span className="text-indigo-400">{paper.conf}</span>
                       </div>
@@ -539,7 +539,7 @@ export default function PixelPortfolio() {
                       </div>
                       <div className="flex flex-wrap gap-2 mt-3">
                         {paper.tags.map(tag => (
-                          <span key={tag} className="text-[10px] uppercase tracking-wider bg-slate-800 text-slate-300 px-1 border border-slate-600">
+                          <span key={tag} className="text-[10px] uppercase tracking-wider bg-slate-800 text-slate-200 px-1 border border-slate-600">
                             #{tag}
                           </span>
                         ))}
@@ -571,7 +571,7 @@ export default function PixelPortfolio() {
                           {proj.subProjects && (
                             <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
                               {proj.subProjects.map((sub, sIdx) => (
-                                <div key={sIdx} className="bg-slate-900/60 border border-slate-700 p-2 text-xs text-slate-300 hover:text-white hover:border-indigo-500 hover:bg-slate-800 transition-colors flex items-start gap-2 rounded-sm cursor-default">
+                                  <div key={sIdx} className="bg-slate-900/60 border border-slate-700 p-2 text-xs text-slate-200 hover:text-white hover:border-indigo-500 hover:bg-slate-800 transition-colors flex items-start gap-2 rounded-sm cursor-default">
                                   <div className="w-1.5 h-1.5 bg-indigo-500 mt-1 shrink-0"></div>
                                   <span className="leading-tight">{sub}</span>
                                 </div>
@@ -606,22 +606,22 @@ export default function PixelPortfolio() {
                         <div className="flex items-center gap-3 p-3 bg-slate-800 border border-slate-700">
                           <Mail size={16} className="text-indigo-400 shrink-0" />
                           <div>
-                            <div className="text-xs text-slate-500 mb-1">Email</div>
+                            <div className="text-xs text-slate-400 mb-1">Email</div>
                             <div className="text-sm text-green-400 font-mono">{EMAIL}</div>
                           </div>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-slate-800 border border-slate-700">
                           <Github size={16} className="text-indigo-400 shrink-0" />
                           <div>
-                            <div className="text-xs text-slate-500 mb-1">GitHub</div>
-                            <a href="https://github.com/YuhangPei" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-200 font-mono hover:text-indigo-400 transition-colors">github.com/YuhangPei</a>
+                            <div className="text-xs text-slate-400 mb-1">GitHub</div>
+                            <a href="https://github.com/YuhangPei" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-100 font-mono hover:text-indigo-400 transition-colors">github.com/YuhangPei</a>
                           </div>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-slate-800 border border-slate-700">
                           <BookOpen size={16} className="text-indigo-400 shrink-0" />
                           <div>
-                            <div className="text-xs text-slate-500 mb-1">Google Scholar</div>
-                            <a href="https://scholar.google.com/citations?user=O959C4AAAAAJ" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-200 font-mono hover:text-indigo-400 transition-colors">scholar.google.com/citations?user=O959C4AAAAAJ</a>
+                            <div className="text-xs text-slate-400 mb-1">Google Scholar</div>
+                            <a href="https://scholar.google.com/citations?user=O959C4AAAAAJ" target="_blank" rel="noopener noreferrer" className="text-sm text-slate-100 font-mono hover:text-indigo-400 transition-colors">scholar.google.com/citations?user=O959C4AAAAAJ</a>
                           </div>
                         </div>
                       </div>
