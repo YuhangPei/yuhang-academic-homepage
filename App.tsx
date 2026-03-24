@@ -39,6 +39,7 @@ interface Project {
   desc: string;
   stack: string;
   subProjects?: string[];
+  github?: string;
 }
 
 interface TimelineItem {
@@ -109,6 +110,7 @@ const TRANSLATIONS = {
       { period: "2025.08 - 2026.03", title: "算法策略实习生", org: "美团" },
     ],
     projects: [
+      { name: "算力坟场 (Compute Graveyard)", desc: "实验室 GPU / 计算容器统一申请与调度平台。支持 GPU 与纯 CPU 容器申请、租期管理、工作区文件编辑与 Code Server（VS Code 浏览器版）直连。", stack: "Docker / GPU / DevOps", github: "https://github.com/YuhangPei/Compute-Graveyard" },
       { name: "中国航发沈阳发动机所", desc: "性能评判系统核心模块设计与实现。", stack: "Industrial / Java" },
       { name: "宁德时代 (CATL)", desc: "锂矿粒度识别系统算法建模与部署。", stack: "CV / Edge Computing" },
       { name: "中航工业", desc: "软件可靠性保障、缺陷检测及知识图谱分析。", stack: "Knowledge Graph" },
@@ -155,6 +157,7 @@ const TRANSLATIONS = {
       { period: "2025.08 - 2026.03", title: "Algorithm Strategy Intern", org: "Meituan" },
     ],
     projects: [
+      { name: "Compute Graveyard", desc: "Unified GPU / compute container application and scheduling platform for labs. Supports GPU and CPU container requests, lease management, workspace file editing, and direct Code Server (VS Code browser) access.", stack: "Docker / GPU / DevOps", github: "https://github.com/YuhangPei/Compute-Graveyard" },
       { name: "AECC Shenyang", desc: "Performance evaluation system for engines.", stack: "Industrial / Java" },
       { name: "CATL", desc: "Lithium ore granularity recognition system.", stack: "CV / Edge Computing" },
       { name: "AVIC", desc: "Software reliability and defect detection analysis.", stack: "Knowledge Graph" },
@@ -579,8 +582,14 @@ export default function PixelPortfolio() {
                             </div>
                           )}
 
-                          <div className="text-xs text-slate-500 font-mono border-t border-slate-800 pt-2 mt-auto">
-                            CORE: <span className="text-indigo-400 font-semibold">{proj.stack}</span>
+                          <div className="text-xs text-slate-500 font-mono border-t border-slate-800 pt-2 mt-auto flex justify-between items-center">
+                            <span>CORE: <span className="text-indigo-400 font-semibold">{proj.stack}</span></span>
+                            {proj.github && (
+                              <a href={proj.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-slate-400 hover:text-indigo-400 transition-colors">
+                                <Github size={12} />
+                                <span>GitHub</span>
+                              </a>
+                            )}
                           </div>
                         </div>
                       </div>
