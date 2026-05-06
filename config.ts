@@ -150,7 +150,7 @@ export const PAPERS: Paper[] = [
     year: "2025", 
     title: "LEAF: Large Language Diffusion Model for Time Series Forecasting", 
     conf: "EMNLP 2025 (Findings, CCF B|CORE A*|THCPL A)", 
-    tags: ["LLM", "Diffusion", "Forecasting"],
+    tags: ["Time Series", "LLM", "Diffusion", "Forecasting"],
     authors: "Y Pei, T Ren, Y Wang, Z Sun, W Ju, C Chen, XS Hua, X Luo"
   },
   { 
