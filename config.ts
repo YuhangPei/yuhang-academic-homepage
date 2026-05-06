@@ -156,8 +156,8 @@ export const PAPERS: Paper[] = [
   { 
     year: "2024", 
     title: "Policy distillation for efficient decentralized execution in multi-agent reinforcement learning", 
-    conf: "Neurocomputing 626", 
-    tags: ["MARL", "RL", "SCI Q1"],
+    conf: "Neurocomputing (JCR Q1|CCF C|中科院二区Top)", 
+    tags: ["MARL", "RL"],
     authors: "Y Pei, T Ren, Y Zhang, Z Sun, M Champeyrol"
   },
 ];
